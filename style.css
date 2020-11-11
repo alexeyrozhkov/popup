@@ -45,9 +45,21 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 50px;
+    box-sizing: border-box;
+    padding-top: 10px;
 }
 
-.closet {
+.popup-text {
+    font-family: 'OpenSans';
+    text-align: center;
+    font-size: 15px;  
+}
+
+.popup-text span {
+    background-color: white;
+}
+
+.closed {
     position: absolute;
     width: 35px;
     height: 30px;
@@ -59,12 +71,12 @@ body {
     box-sizing: border-box;
 }
 
-.closet:active,
-.closet:focus {
+.closed:active,
+.closed:focus {
     outline: none;
 }
 
-.closet:hover {
+.closed:hover {
     color: white;
     background-color: #FE0600;
 }
@@ -78,3 +90,4 @@ body {
     left: 0;
     background-color:rgba(0,0,0,0.5);
 }
+

@@ -7,11 +7,18 @@
     <title>Popup</title>
 </head>
 <body>
-    <button class="button" type="button">Press me</button>
-    <div class="overlay">
-        <div class="popup">
-            <p>ffsjkfskjfskjfssfkjfsnkjfsfskjsf</p>
-            <button class="closet" type="button">✘</button>
+    <button class="button" type="button" data-category="button">Press me</button>
+    <div class="overlay" data-category="overlay">
+        <div class="popup" data-category="popup">
+            <p class="popup-text" data-category="popup">
+               <span data-category="popup">if you see this window and it does not bother you, then just ignore it</span>    
+            </p>
+            <p class="popup-text" data-category="popup">
+                <span data-category="popup">but if for some reason it bothers you, then press the "escape" key or on the ✘ or click the mouse button outside this window  </span>   
+            </p>
+            
+            
+            <button class="closed" type="button" data-category="popup" >✘</button>
         </div>
     </div>
 <script src="script.js"></script>    

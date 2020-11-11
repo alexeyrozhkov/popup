@@ -1,6 +1,6 @@
 const buttonCreatePopup = document.querySelector('.button');
 const popupElement = document.querySelector('.popup');
-const buttonClosetPopup = document.querySelector('.closet');
+const buttonClosetPopup = document.querySelector('.closed');
 const overlay = document.querySelector('.overlay');
 
 function removeElement(element) {
@@ -12,23 +12,19 @@ function showElement(element) {
 
 document.addEventListener('keydown',function(e) {
     if(e.key == 'Escape') {
-        removeElement(overlay);
-        showElement(buttonCreatePopup);  
+        removeElement(overlay);  
     }
 });
 
 
 buttonCreatePopup.onclick = function() {
-    removeElement(buttonCreatePopup);
     showElement(overlay);
 }
 
 overlay.onclick = function(e) {
     let target = e.target;
-    if(!target.classList.contains('popup') || target.classList.contains('closet')) {
-        removeElement(overlay);
-        showElement(buttonCreatePopup);
+    if(!target.classList.contains('overlay') && !target.classList.contains('closed')) {
         return;
     }
-    
+    removeElement(overlay);
 }
