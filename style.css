@@ -8,7 +8,6 @@ body {
     background-image: url("./assets/body-img.png");
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
     
 }
 .button {
@@ -36,7 +35,6 @@ body {
 
 .popup {
     display: block;
-    z-index: 100;
     width: 50%;
     height: 500px;
     position: relative;
