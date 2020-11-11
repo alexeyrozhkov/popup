@@ -1,30 +1,29 @@
-const buttonCreatePopup = document.querySelector('.button');
+const buttonShowPopup = document.querySelector('.button');
 const popupElement = document.querySelector('.popup');
-const buttonClosetPopup = document.querySelector('.closed');
 const overlay = document.querySelector('.overlay');
 
-function removeElement(element) {
+function hideElement(element) {
     element.style.display = 'none';
 }
 function showElement(element) {
     element.style.display = "block";
 }
 
-document.addEventListener('keydown',function(e) {
-    if(e.key == 'Escape') {
-        removeElement(overlay);  
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape') {
+        hideElement(overlay);  
     }
 });
 
-
-buttonCreatePopup.onclick = function() {
+buttonShowPopup.onclick = function() {
     showElement(overlay);
 }
 
 overlay.onclick = function(e) {
-    let target = e.target;
-    if(!target.classList.contains('overlay') && !target.classList.contains('closed')) {
-        return;
+    const target = e.target;
+    const isOverlay = target.classList.contains('overlay');
+    const isClosedButton = target.classList.contains('closed');
+    if(isOverlay || isClosedButton) {
+        hideElement(overlay);
     }
-    removeElement(overlay);
 }
