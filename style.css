@@ -1,0 +1,80 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("./fonts/OpenSans-Regular.ttf");
+}
+
+body {
+    width: 100%;
+    background-image: url("./assets/body-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    
+}
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: #A5EF00;
+    border-radius: 20%;
+    border: 1px solid black;
+    font-family: 'OpenSans';
+    display: block;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+.button:active,
+.button:focus {
+    outline: none;
+}
+
+.popup {
+    display: block;
+    z-index: 100;
+    width: 50%;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    background-image: url('./assets/popup-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+}
+
+.closet {
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    top:0;
+    right: 0;
+    color:  #FE0600;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.closet:active,
+.closet:focus {
+    outline: none;
+}
+
+.closet:hover {
+    color: white;
+    background-color: #FE0600;
+}
+
+.overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color:rgba(0,0,0,0.5);
+}
